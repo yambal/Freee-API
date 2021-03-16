@@ -1,0 +1,1 @@
+export const HR_ENDPOINT = "https://api.freee.co.jp/hr/api/v1"
