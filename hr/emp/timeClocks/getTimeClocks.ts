@@ -15,7 +15,7 @@ import { AxiosError } from "axios";
 
 export const getTimeClocks = (token: string, company_id: number, employee_id: number): Promise<any> => {
   return new Promise((resolve: (timeClocks: EmployeeTimeClock[]) => void, reject:(error: FreeeApiError) => void) => {
-    return hrRequest(token, {
+    hrRequest(token, {
       company_id
     }).get(`/employees/${employee_id}/time_clocks`)
     .then((response) => {

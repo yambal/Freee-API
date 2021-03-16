@@ -13,7 +13,7 @@ import { AxiosError } from "axios";
 
 export const getAvailableTypes = (token: string, companyId: number, employeeId: number): Promise<AvailableTypes> => {
   return new Promise((resolve: (availableTypes: AvailableTypes) => void, reject:(error: FreeeApiError) => void) => {
-    return hrRequest(token, {
+    hrRequest(token, {
       company_id: companyId
     }).get(`/employees/${employeeId}/time_clocks/available_types`)
     .then((response) => {

@@ -5,7 +5,7 @@ import { FreeeApiError, HrUser } from "../hrTypes"
 
 export const hrGetMe = (token: string): Promise<HrUser> => {
   return new Promise((resolve: (user: HrUser) => void, reject:(error: FreeeApiError) => void) => {
-    return hrRequest(token).get("/users/me")
+    hrRequest(token).get("/users/me")
     .then((response) => {
       functions.logger.debug("response", response.data)
       const me: HrUser = response.data

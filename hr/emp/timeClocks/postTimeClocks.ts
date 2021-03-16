@@ -17,7 +17,7 @@ export const postTimeClocks = (token: string, companyId: number, employeeId: num
       dateTime
     })
 
-    return hrRequest(token)
+    hrRequest(token)
     .post(`/employees/${employeeId}/time_clocks`, {
       "company_id": companyId,
       "type": type,

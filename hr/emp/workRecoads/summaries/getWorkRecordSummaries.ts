@@ -4,9 +4,9 @@ import { AxiosError, AxiosResponse } from "axios"
 import * as functions from "firebase-functions";
 import {FreeeApiError, WorkRecordSummaries} from "../../../hrTypes"
 
+
 export const getWorkRecordSummaries = (token: string, company_id: number, employee_id: number): Promise<WorkRecordSummaries> => {
   return new Promise((resolve: (workRecordSummaries: WorkRecordSummaries) => void, reject: (error: FreeeApiError) => void ) => {
-
     const now = new Date()
     const YeatMonthPath = `${getYear(now)}/${getMonth(now)}`
 
